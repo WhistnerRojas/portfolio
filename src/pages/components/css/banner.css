@@ -1,0 +1,85 @@
+@media screen and (min-width: 1079px) {
+    .home{
+        width: 0;
+        animation: expand .5s ease-in-out forwards;
+        animation-delay: .5s;
+        opacity: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: opacity 1s ease-out;
+        transform: translate3d(0, 0, 0);
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .home{
+        opacity: 0;
+        white-space: none;
+        text-overflow: none;
+        height: 100% !important;
+    }
+}
+
+.home.visible{
+    opacity: 1;
+}
+
+.noclose{
+    cursor: not-allowed;
+    align-self: center;
+    margin-right: 4px;
+}
+
+.noclose:hover{
+    background-color: brown;
+    border-radius: 0 5px 0 0;
+    color: rgb(238, 238, 238) !important;
+}
+
+@keyframes expand {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.social > a{
+    margin-right: 10px;
+}
+
+.social > a:hover{
+    color: yellow !important;
+    transition: .3s;
+}
+
+/* typing animation */
+
+/* .typing{
+    position: relative;
+}
+
+.typing::before,
+.typing::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom: 0;
+}
+
+.typing::before{
+    background-color: teal;
+    animation: typewriter 4s steps(19) forwards 1.2s;
+}
+
+@keyframes typewriter {
+    to{
+        left: 100%;
+    }
+} */

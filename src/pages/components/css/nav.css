@@ -1,0 +1,36 @@
+.siteName, .siteName a{
+    font-family: 'Rampart One', cursive !important;
+}
+
+nav {
+    transition: background-color 0.5s ease;
+}
+
+.download{
+    color: white;
+}
+
+.download:hover{
+    color: black;
+}
+
+.navLinks a{
+    position: relative;
+    color: white !important;
+    margin: 0 5px;
+}
+
+.navLinks a::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: whitesmoke;
+    transition: width 0.5s ease;
+}
+
+.navLinks a:hover::before {
+    width: 100%;
+}

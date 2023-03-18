@@ -56,7 +56,7 @@ function Navigation() {
                     </Nav.Link>
                 </Nav>
                 <Nav className='pt-3 ps-5'>
-                    <Nav.Link href="" className='btn btn-outline-warning download'>
+                    <Nav.Link href="https://drive.google.com/file/d/1-VM0xXxw4zimzih6AtCZM9p9BoFbWCgQ/view?usp=sharing" target='_blank' download={true} className='btn btn-outline-warning download'>
                         Download CV
                     </Nav.Link>
                 </Nav>

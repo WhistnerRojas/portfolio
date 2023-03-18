@@ -4,23 +4,20 @@ import Collapse from 'react-bootstrap/Collapse';
 
 export default function Skills(props: any) {
 
-    const [open, setOpen] = useState(false);
-
     return (
         <>
             <Button
-                onClick={() => setOpen(!open)}
-                aria-controls="example-collapse-text"
-                aria-expanded={open}
-                variant='text-white-50'
+                onClick={props.click}
+                aria-controls={`collapse-desc${props.id}`}
+                aria-expanded={props.open}
+                variant='outline-info'
+                className='m-1 fw-semibold text-warning skillsHover'
             >
             {props.tech}
             </Button>
-            <Collapse in={open}>
-                <div id="example-collapse-text">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-                labore wes anderson cred nesciunt sapiente ea proident.
+            <Collapse in={props.open}>
+                <div id={`collapse-desc${props.id}`} className='ps-2'>
+                    {props.desc}
                 </div>
             </Collapse>
         </>

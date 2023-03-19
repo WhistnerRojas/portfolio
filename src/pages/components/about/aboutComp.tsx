@@ -25,10 +25,12 @@ export default function AboutComp(props:any) {
     ]
 
     const handleCollapse = (e:React.MouseEvent)=>{
+        const target = e.currentTarget
+
             // currentCollapse === e.currentTarget.innerHTML && setOpen(false)
             // if(currentCollapse !== e.currentTarget.innerHTML) {
                 setOpen(!open) 
-                setCurrentCollapse(e.currentTarget.innerHTML)
+                setCurrentCollapse(target.innerHTML)
             // }
     }
 

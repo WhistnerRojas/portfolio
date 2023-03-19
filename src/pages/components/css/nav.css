@@ -6,6 +6,10 @@ nav {
     transition: background-color 0.5s ease;
 }
 
+.navbar-expand-lg{
+    text-align: end;
+}
+
 /* nav .container{
     padding: 5px 0;
 } */
@@ -16,8 +20,8 @@ nav {
     text-decoration: none;
 }
 
-.download:hover{
-    color: black;
+.download a:hover{
+    color: black !important;
 }
 
 .navLinks .nav-item a{

@@ -2,9 +2,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Container } from 'react-bootstrap';
 import React, {useEffect} from 'react'
+import { Link } from 'react-router-dom';
 import './css/nav.css'
 
-function Navigation() {
+function Navigation(prop: any) {
 
     useEffect(() => {
 
@@ -38,27 +39,27 @@ function Navigation() {
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky='top' className='pt-3 nav'>
             <Container>
-                <Navbar.Brand className='siteName fs-4' href="#home">{'<'}Whistner{'/>'}</Navbar.Brand>
+                <Navbar.Brand className='siteName fs-4' href="/">{'<'}Whistner{'/>'}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" className='bgBurger'>
                 <Nav className="justify-content-end flex-grow-1 px-3 pt-3 navLinks">
-                    <Nav.Link onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} href="#home">
-                        Home
-                    </Nav.Link>
-                    <Nav.Link href="#about">
-                        About
-                    </Nav.Link>
-                    <Nav.Link href="#portfolio">
-                        Portfolio
-                    </Nav.Link>
-                    <Nav.Link href="#contact">
-                        Contact
-                    </Nav.Link>
+                    <Nav.Item onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        <Link to='/' onClick={prop.click} data-nav='home'>Home</Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Link to='/about' onClick={prop.click} data-nav='about'>About</Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Link to='/portfolio' onClick={prop.click} data-nav='portfolio'>Portfolio</Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Link to='/contact' onClick={prop.click} data-nav='contact'>Contact</Link>
+                    </Nav.Item>
                 </Nav>
                 <Nav className='pt-3 ps-5'>
-                    <Nav.Link href="https://drive.google.com/file/d/1-VM0xXxw4zimzih6AtCZM9p9BoFbWCgQ/view?usp=sharing" target='_blank' download={true} className='btn btn-outline-warning download'>
-                        Download CV
-                    </Nav.Link>
+                    <Nav.Item className='btn btn-outline-warning download'>
+                        <Link to='https://drive.google.com/file/d/1-VM0xXxw4zimzih6AtCZM9p9BoFbWCgQ/view?usp=sharing' target='_blank' download={true}>Download CV</Link>
+                    </Nav.Item>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

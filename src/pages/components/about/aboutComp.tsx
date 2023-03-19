@@ -39,7 +39,6 @@ export default function AboutComp(props:any) {
                     <img src={props.img} draggable='false' className="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="500" height="500" loading="lazy" />
                 </div>
                 <div className="col-lg-6">
-                    <div id="desc"></div>
                     {props.skills === true ? techStack.map((stack, keys)=>{
                             return <Skills open={stack.lang===currentCollapse && open} click={handleCollapse} key={keys} tech={stack.lang} id={keys} desc={stack.desc}/>
                         }) : props.p}

@@ -12,7 +12,7 @@ body{
   font-family: 'Comfortaa', 'cursive' !important;
   margin: 0;
   padding: 0;
-  background: linear-gradient(100deg,#005288, #7544ad, #8e44ad);
+  background: linear-gradient(100deg,#005288, #6245ca, #8e44ad);
   /* -webkit-background-color: linear-gradient(100deg,#005288, #7544ad, #8e44ad); */
   /* background-size: cover; */
   scroll-behavior: smooth;
@@ -20,18 +20,18 @@ body{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #c9c9c9;
+  background: #8e44ad; 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #8e44ad; 
-  /* border-radius: 10px; */
+  background: #c9c9c9;
+  border-radius: 10px;
 }
 
 /* Handle on hover */

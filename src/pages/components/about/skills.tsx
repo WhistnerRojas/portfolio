@@ -10,8 +10,7 @@ export default function Skills(props: any) {
                 onClick={props.click}
                 aria-controls={`collapse-desc${props.id}`}
                 aria-expanded={props.open}
-                variant='outline-info'
-                className='m-1 fw-semibold text-warning skillsHover'
+                className='m-1 fw-semibold text-white skillsHover bg-white bg-opacity-25 border-0'
             >
             {props.tech}
             </Button>

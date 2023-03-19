@@ -6,24 +6,31 @@ nav {
     transition: background-color 0.5s ease;
 }
 
-.download{
+/* nav .container{
+    padding: 5px 0;
+} */
+
+.download a{
     color: white;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .download:hover{
     color: black;
 }
 
-.navLinks a{
+.navLinks .nav-item a{
     position: relative;
+    text-decoration: none;
     color: white !important;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
-.navLinks a::before {
+.navLinks .nav-item a::before {
     content: '';
     position: absolute;
-    bottom: 5px;
+    bottom: -3px;
     left: 0;
     width: 0;
     height: 2px;
@@ -31,6 +38,6 @@ nav {
     transition: width 0.5s ease;
 }
 
-.navLinks a:hover::before {
+.navLinks .nav-item a:hover::before {
     width: 100%;
 }

@@ -15,7 +15,7 @@ export default function Skills(props: any) {
             {props.tech}
             </Button>
             <Collapse in={props.open}>
-                <div id={`collapse-desc${props.id}`} className='ps-3'>
+                <div id={`collapse-desc${props.id}`} className='ps-3 py-2'>
                     {props.desc}
                 </div>
             </Collapse>

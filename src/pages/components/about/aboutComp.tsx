@@ -1,28 +1,13 @@
 import React, {useState} from 'react'
 import Skills from '../about/skills';
+import StackData from '../../../assets/techStack';
 
 export default function AboutComp(props:any) {
 
     const [open, setOpen] = useState(false);
     const [currentCollapse, setCurrentCollapse] = useState<String | null>(null)
 
-    const techStack = [
-        {lang: 'HTML', desc:'asdasd'}, 
-        {lang: 'CSS', desc:'asdsadwqe'}, 
-        {lang: 'Bootstrap', desc:'asvasdwwwwwww'}, 
-        {lang: 'JS', desc:'asdasdasac'}, 
-        {lang: 'React', desc:'asddwqe'}, 
-        {lang: 'NodeJs', desc:''}, 
-        {lang: 'ExpressJs', desc:''}, 
-        {lang: 'PHP', desc:''}, 
-        {lang: 'Laravel', desc:''}, 
-        {lang: 'MySQL', desc:''},
-        {lang: 'AWS EC2 & RDS', desc:''},
-        {lang: 'Firebase(realtime DB)', desc:''},
-        {lang: 'C++', desc:''},
-        {lang: 'JAVA', desc:''},
-        {lang: 'Photoshop', desc:''}
-    ]
+    const techData = StackData.data.techStack
 
     const handleCollapse = (e:React.MouseEvent)=>{
         const target = e.currentTarget
@@ -41,7 +26,7 @@ export default function AboutComp(props:any) {
                     <img src={props.img} draggable='false' className="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="500" height="500" loading="lazy" />
                 </div>
                 <div className="col-lg-6">
-                    {props.skills === true ? techStack.map((stack, keys)=>{
+                    {props.skills === true ? techData.map((stack, keys)=>{
                             return <Skills open={stack.lang===currentCollapse && open} click={handleCollapse} key={keys} tech={stack.lang} id={keys} desc={stack.desc}/>
                         }) : props.p}
                 </div>

@@ -16,9 +16,9 @@ export default function Landingpage() {
     useEffect(()=>{
         
         page === 'about' && document.querySelector('#intersectsAbout')?.scrollIntoView({behavior: 'smooth'})
-        page === 'contact' && document.querySelector('#intersectsAbout')?.scrollIntoView({behavior: 'smooth'})
+        page === 'contact' && document.querySelector('#intersectsContact')?.scrollIntoView({behavior: 'smooth'})
 
-    }, [page])
+    }, [handlePage])
 
     return (
         <>

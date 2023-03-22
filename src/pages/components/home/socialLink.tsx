@@ -4,7 +4,7 @@ import {AiFillGoogleCircle} from 'react-icons/ai'
 
 export default function SocialLink() {
     return (
-        <span className='fs-2 social text-primary'>
+        <span className='fs-2 social'>
             <a href="https://web.facebook.com/whistner.R" target="_blank" rel='noreferrer'><FaFacebook /></a>
             <a href="https://github.com/WhistnerRojas" target="_blank" rel='noreferrer noopener'><FaGithub /></a>
             <a href="https://t.me/OneP1nch" target="_blank" rel='noreferrer'><FaTelegram /></a>

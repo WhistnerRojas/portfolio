@@ -1,31 +1,31 @@
 import * as React from 'react';
 import {TextField } from '@mui/material';
 
-export default function Contactfield(props:any) {
+export default function Contactfield({label, rows, register, error, multiline, helperText}:any) {
     return (
             <>
                 {
-                props.multiline ? <TextField 
+                multiline ? <TextField 
                                         id="outlined-basic" 
-                                        label={props.label} 
+                                        label={label} 
                                         variant="outlined" 
                                         // margin="normal"
                                         fullWidth
                                         multiline
-                                        rows={props.rows}
-                                        {...props.register}
-                                        error={props.error}
-                                        helperText={props.helperText}
+                                        rows={rows}
+                                        {...register}
+                                        error={error}
+                                        helperText={helperText}
                                     /> :
                                     <TextField 
                                         id="outlined-basic" 
-                                        label={props.label} 
+                                        label={label} 
                                         variant="outlined" 
                                         // margin="normal"
                                         fullWidth
-                                        {...props.register}
-                                        error={props.error}
-                                        helperText={props.helperText}
+                                        {...register}
+                                        error={error}
+                                        helperText={helperText}
                                     />
                 }
             </>

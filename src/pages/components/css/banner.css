@@ -53,7 +53,7 @@
 }
 
 .social > a:hover{
-    color: yellow !important;
+    color: var(--secondaryBg) !important;
     transition: .3s;
 }
 

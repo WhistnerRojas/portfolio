@@ -1,0 +1,139 @@
+.rotateBody{
+    display: grid;
+    place-items: center;
+    min-height: 350px;
+}
+
+.centerImg {
+    position: absolute;
+    z-index: 1;
+    top: calc(var(--size) /2);
+    left: calc(var(--size) /2);
+}
+
+.centerImg img{
+    width: 120px;
+}
+
+.parentRotate{
+    width: 50px;
+    aspect-ratio: 1;
+    background: lightblue;
+    border-radius: 50%;
+    animation: orbit 30s linear infinite;
+
+    position: relative;
+}
+
+.parentRotate:hover, .circling *:hover{
+    animation-play-state: paused;
+}
+
+.circling{
+    --size: 50px;
+    --centerOffset: 130px;
+
+    display: grid;
+    place-items: center;
+    position:absolute;
+    top: calc(var(--size) /20);
+    left: calc(var(--size) /20);
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #0d6efd;
+
+    transform: 
+    translate(
+        calc(cos(var(--degrees)) * var(--centerOffset)),
+        calc(sin(var(--degrees)) * var(--centerOffset))
+    );
+}
+
+.circling:nth-of-type(1){
+    --degrees: 0deg;
+}
+.circling:nth-of-type(2){
+    --degrees: 60deg;
+}
+.circling:nth-of-type(3){
+    --degrees: 120deg;
+}
+.circling:nth-of-type(4){
+    --degrees: 180deg;
+}
+.circling:nth-of-type(5){
+    --degrees: 240deg;
+}
+.circling:nth-of-type(6){
+    --degrees: 300deg;
+}
+
+.circling > *{
+    animation: orbit 30s linear infinite reverse;
+}
+
+.parentRotate:hover .circling *{
+    animation-play-state: paused;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.pointer:hover{
+    color: var(--secondaryBg);
+}
+
+.droplet {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 9%;
+    left: 8%;
+    z-index: -2;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #eeff00, #00b7ff);
+    animation: wave 1.5s linear infinite;
+}
+
+.droplet:before {
+    content: "";
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff;
+    animation: droplet 1.5s linear infinite;
+}
+
+@keyframes droplet {
+    0% {
+        box-shadow: 0 0 10px #fff, 0 0 20px #00bfff, 0 0 40px #00bfff, 0 0 60px #00bfff, 0 0 80px #00bfff;
+    }
+    100% {
+        box-shadow: 0 0 20px #fff, 0 0 40px #8a2be2, 0 0 80px #8a2be2, 0 0 120px #8a2be2, 0 0 160px #8a2be2;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+        opacity: 1.0;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0.0;
+    }
+}
+
+
+@keyframes orbit {
+    100%{
+        rotate: 1turn;
+    }
+}

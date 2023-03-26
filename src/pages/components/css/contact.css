@@ -16,11 +16,14 @@
 }
 
 .parentRotate{
+
+    --orbitSpeed: 40s;
+
     width: 50px;
     aspect-ratio: 1;
     background: lightblue;
     border-radius: 50%;
-    animation: orbit 30s linear infinite;
+    animation: orbit var(--orbitSpeed) linear infinite;
 
     position: relative;
 }
@@ -70,7 +73,7 @@
 }
 
 .circling > *{
-    animation: orbit 30s linear infinite reverse;
+    animation: orbit var(--orbitSpeed) linear infinite reverse;
 }
 
 .parentRotate:hover .circling *{
@@ -94,7 +97,7 @@
     z-index: -2;
     border-radius: 50%;
     background: radial-gradient(circle at center, #eeff00, #00b7ff);
-    animation: wave 1.5s linear infinite;
+    animation: wave 2s linear infinite;
 }
 
 .droplet:before {
@@ -108,7 +111,7 @@
     border-radius: 50%;
     background-color: #fff;
     box-shadow: 0 0 10px #fff;
-    animation: droplet 1.5s linear infinite;
+    animation: droplet 2s linear infinite;
 }
 
 @keyframes droplet {

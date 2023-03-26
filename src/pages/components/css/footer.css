@@ -1,4 +1,9 @@
 .footer{
-    /* background: var(--secondaryBg)!important; */
-    min-height: 100px;
+    min-height: fit-content;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Rampart One', cursive !important;
 }

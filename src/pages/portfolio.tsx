@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from "react"
 import { Container } from "react-bootstrap"
 import SubLinks from "./components/portfolio/subLinks"
+import PortfolioCard from "./components/portfolio/portfolioCard";
 
 export default function Portfolio() {
 
@@ -52,7 +53,7 @@ export default function Portfolio() {
     }, [])
 
     const subLinks = [
-        'all', 'Kodego', 'Freelancer.com', 'Upwork.com', 'Codewars', 'Frontend Mentor'
+        'all', 'Kodego', 'Codewars', 'Frontend Mentor'
     ]
 
     const portal =() =>{
@@ -72,9 +73,17 @@ export default function Portfolio() {
                     </div>
                 </div>
             </Container>
-            <main className="pt-4">
-                <Container>
-                    <p>Under Construction</p>
+            <main className="container pt-4">
+                <Container className="py-4 portfolio_card d-flex flex-wrap justify-content-center">
+                    <PortfolioCard />
+                    <PortfolioCard />
+                    <PortfolioCard />
+                    <PortfolioCard />
+                    <PortfolioCard />
+                    <PortfolioCard />
+                    <PortfolioCard />
+                    <PortfolioCard />
+                    <PortfolioCard />
                 </Container>
             </main>
         </>

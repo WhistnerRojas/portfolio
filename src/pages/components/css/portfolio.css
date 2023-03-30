@@ -17,5 +17,20 @@
 }
 
 .subLinks_child:hover{
+    background-color: var(--subLinks) !important;
+}
+
+.subLinks.active{
     background-color: #46464680 !important;
+}
+
+.portfolio_title::before{
+    position: absolute;
+    color: rgb(241, 241, 241);
+    z-index: 2;
+    transform: translate(-12px, -15px);
+    padding: 5px 10px;
+    /* background: linear-gradient(100deg,#eb6797, #5260cc); */
+    background: #303030;
+    border-radius: 5px;
 }

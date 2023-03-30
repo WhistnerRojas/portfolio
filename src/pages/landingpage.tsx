@@ -4,9 +4,11 @@ import Portfolio from './portfolio'
 import React, { useEffect } from 'react'
 import {StoreHooks} from '../assets/storeHooks'
 
-export default function Landingpage() {
+export default function Landingpage({ viewPage }: { viewPage: string | null }) {
 
     const {page, setPage, setAuth} = StoreHooks()
+
+    // viewPage !== null && setPage(viewPage)
 
     const handlePage = (e:React.MouseEvent)=>{
         const clickPage = e.currentTarget.getAttribute('data-nav')
@@ -14,11 +16,12 @@ export default function Landingpage() {
     }
 
     useEffect(()=>{
-        
+
+        viewPage !== null && setPage(viewPage)
         page === 'about' && document.querySelector('#intersectsAbout')?.scrollIntoView({behavior: 'smooth'})
         page === 'contact' && document.querySelector('#intersectsContact')?.scrollIntoView({behavior: 'smooth'})
 
-    }, [handlePage])
+    }, [page])
 
     return (
         <>

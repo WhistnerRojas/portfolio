@@ -3,12 +3,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material'
-import Web from '../../img/web3.png'
+import {CardActionArea, CardActions } from '@mui/material'
 
-export default function PortfolioCard() {
+export default function PortfolioCard(props:any) {
 
     const kodego = 'kodego'
+    const imgPath = '../../../../resources/img'
 
     return (
         <Card sx={{ 
@@ -19,6 +19,7 @@ export default function PortfolioCard() {
                 marginTop: 2, 
                 marginBottom: 8, 
                 borderRadius: 3,
+                background: 'var(--subLinks)',
                 '&::before':{
                     content: `"${kodego}"`,
                 }
@@ -26,18 +27,30 @@ export default function PortfolioCard() {
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="380"
-                    image={Web}
+                    height="250"
+                    image={`${imgPath}/${props.img}`} 
                     alt="green iguana"
                 />
-                <CardContent sx={{background: 'var(--subLinks)'}}>
-                    <Typography gutterBottom variant="h5" component="div" textAlign='center' 
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div" 
                         sx={{color: 'white !important'}}
                     >
                         Lizard
                     </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        Lizards are a widespread group of squamate reptiles, with over 6,000
+                        species, ranging across all continents except Antarctica
+                    </Typography>
                 </CardContent>
             </CardActionArea>
+            <CardActions>
+                <a className='btn btn-dark' href='#'>
+                    Github
+                </a>
+                <a className='btn btn-dark' href='#'>
+                    Live Demo
+                </a>
+            </CardActions>
         </Card>
     );
 }

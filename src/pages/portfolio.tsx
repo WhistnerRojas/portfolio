@@ -73,19 +73,19 @@ export default function Portfolio() {
                     </div>
                 </div>
             </Container>
-            <main className="container pt-4">
+            <section className="container pt-4">
                 <Container className="py-4 portfolio_card d-flex flex-wrap justify-content-center">
-                    <PortfolioCard />
-                    <PortfolioCard />
-                    <PortfolioCard />
-                    <PortfolioCard />
-                    <PortfolioCard />
-                    <PortfolioCard />
-                    <PortfolioCard />
-                    <PortfolioCard />
-                    <PortfolioCard />
+                    <PortfolioCard img='web3.png'/>
+                    <PortfolioCard img='web2.png'/>
+                    <PortfolioCard img='web1.png'/>
+                    <PortfolioCard img='web3.png'/>
+                    <PortfolioCard img='web3.png'/>
+                    <PortfolioCard img='web3.png'/>
+                    <PortfolioCard img='web3.png'/>
+                    <PortfolioCard img='web3.png'/>
+                    <PortfolioCard img='web3.png'/>
                 </Container>
-            </main>
+            </section>
         </>
     )
 }

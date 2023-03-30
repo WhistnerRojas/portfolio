@@ -3,6 +3,7 @@ import Home from './home'
 import Portfolio from './portfolio'
 import React, { useEffect } from 'react'
 import {StoreHooks} from '../assets/storeHooks'
+import Footer from './components/home/footer'
 
 export default function Landingpage({ viewPage }: { viewPage: string | null }) {
 
@@ -30,6 +31,7 @@ export default function Landingpage({ viewPage }: { viewPage: string | null }) {
                 {page !== 'portfolio' && <Home />}
                 {page === 'portfolio' && <Portfolio />}
             </main>
+            <Footer />
         </>
     )
 }

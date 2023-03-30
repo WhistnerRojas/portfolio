@@ -7,13 +7,13 @@ import {CardActionArea, CardActions } from '@mui/material'
 
 export default function PortfolioCard(props:any) {
 
-    const kodego = 'kodego'
+    const platform = 'Kodego'
     const imgPath = '../../../../resources/img'
 
     return (
         <Card sx={{ 
                 maxWidth: 390, 
-                height: 450, 
+                height: 442, 
                 marginLeft: 2, 
                 marginRight: 2, 
                 marginTop: 2, 
@@ -21,10 +21,10 @@ export default function PortfolioCard(props:any) {
                 borderRadius: 3,
                 background: 'var(--subLinks)',
                 '&::before':{
-                    content: `"${kodego}"`,
+                    content: `"${platform}"`,
                 }
             }} className='portfolio_title'>
-            <CardActionArea>
+            <CardActionArea sx={{'&:hover':{cursor: 'default'}}}>
                 <CardMedia
                     component="img"
                     height="250"
@@ -37,8 +37,8 @@ export default function PortfolioCard(props:any) {
                     >
                         Lizard
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
+                    <Typography variant="body2" color="text.secondary" className='fs-6'>
+                        TechStack: Lizards are a widespread group of squamate reptiles, with over 6,000
                         species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>

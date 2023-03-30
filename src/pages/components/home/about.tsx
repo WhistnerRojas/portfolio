@@ -17,9 +17,9 @@ export default function About(): JSX.Element {
                 <AboutComp p={
                 <>
                     <h4>2022 - 2023 Full stack Web Development</h4>
-                    <p className='pb-3 ms-5'>Kodego Bootcamp</p>
+                    <p className='pb-3 ms-5 lead'>Kodego Bootcamp</p>
                     <h4>2009 - 2012 Computer Science</h4>
-                    <p className='ms-5'>Asian Institute of Computer Studies</p>
+                    <p className='ms-5 lead'>Asian Institute of Computer Studies</p>
                 </>
                 } 
                 img={Pic3} flex='flex-lg-row-reverse'/>

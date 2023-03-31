@@ -1,55 +1,56 @@
-import React, {useRef, useEffect} from "react"
+import React, {useRef, useEffect, Component} from "react"
 import { Container } from "react-bootstrap"
 import SubLinks from "./components/portfolio/subLinks"
-import PortfolioCard from "./components/portfolio/portfolioCard";
+import PortfolioCard from "./components/portfolio/portfolioCard"
+import PortfolioData from "../assets/portfolioData"
+// import { object } from "yup";
 
 export default function Portfolio() {
 
-    interface scrollX{
-        children : React.ReactNode;
-    }
+    // interface scrollX{
+    //     children : React.ReactNode;
+    // }
 
     const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(()=>{
         const container = containerRef.current;
-
-    const handleScroll = (e: WheelEvent) => {
-        if (container) {
-            container.scrollLeft += e.deltaY;
-        }
-    };
-
-    const updateScroll = () => {
-        if (container) {
-            const firstChild = container.firstChild as HTMLElement;
-            const lastChild = container.lastChild as HTMLElement;
-            const containerWidth = container.clientWidth;
-            const scrollWidth = container.scrollWidth;
-
-            if (firstChild && lastChild && containerWidth && scrollWidth) {
-                const firstChildLeft = firstChild.offsetLeft;
-                const lastChildRight = lastChild.offsetLeft + lastChild.offsetWidth;
-
-                if (firstChildLeft < 0) {
-                    container.scrollLeft += firstChildLeft;
-                } else if (lastChildRight > containerWidth) {
-                    container.scrollLeft -= lastChildRight - containerWidth;
-                }
+        const handleScroll = (e: WheelEvent) => {
+            if (container) {
+                container.scrollLeft += e.deltaY
             }
         }
-    };
 
-    if (container) {
-        container.addEventListener('wheel', handleScroll);
-        updateScroll();
-    }
+        const updateScroll = () => {
+            if (container) {
+                const firstChild = container.firstChild as HTMLElement;
+                const lastChild = container.lastChild as HTMLElement;
+                const containerWidth = container.clientWidth;
+                const scrollWidth = container.scrollWidth;
 
-    return () => {
+                if (firstChild && lastChild && containerWidth && scrollWidth) {
+                    const firstChildLeft = firstChild.offsetLeft;
+                    const lastChildRight = lastChild.offsetLeft + lastChild.offsetWidth;
+
+                    if (firstChildLeft < 0) {
+                        container.scrollLeft += firstChildLeft;
+                    } else if (lastChildRight > containerWidth) {
+                        container.scrollLeft -= lastChildRight - containerWidth;
+                    }
+                }
+            }
+        };
+
         if (container) {
-            container.removeEventListener('wheel', handleScroll);
+            container.addEventListener('wheel', handleScroll)
+            updateScroll()
         }
-    };
+
+        return () => {
+            if (container) {
+                container.removeEventListener('wheel', handleScroll)
+            }
+        }
     }, [])
 
     const subLinks = [
@@ -64,6 +65,33 @@ export default function Portfolio() {
         })
     }
 
+    const cardInfo = (obj: any) : any=>{
+        let i:number=0
+            const projectList = Object.keys(obj.data)
+            return projectList.map((projectInfo, keys)=>{
+                const platform = obj.data[projectInfo].platform
+                const projectName = obj.data[projectInfo].title
+                const projectLang = obj.data[projectInfo].techStach
+                const projectDesc = obj.data[projectInfo].desc
+                const projectImg = obj.data[projectInfo].img
+                const projectGit = obj.data[projectInfo].github
+                const projectDemo = obj.data[projectInfo].demo
+
+                return(
+                    <PortfolioCard 
+                        key={keys} 
+                        platform={platform !== '' ? platform : 'Platform'} 
+                        projName={projectName !== '' ? projectName : 'Project Name'}
+                        projLang={projectLang}
+                        projDesc={projectDesc}
+                        projGit={projectGit !== '' ? projectGit : '#'}
+                        projDemo={projectDemo !== '' ? projectDemo : '#'}
+                        img={projectImg !== '' ? projectImg : 'web3.png'} 
+                    />
+                )
+            })
+    }
+
     return (
         <>
             <Container>
@@ -74,16 +102,8 @@ export default function Portfolio() {
                 </div>
             </Container>
             <section className="container pt-4">
-                <Container className="py-4 portfolio_card d-flex flex-wrap justify-content-center">
-                    <PortfolioCard img='web3.png'/>
-                    <PortfolioCard img='web2.png'/>
-                    <PortfolioCard img='web1.png'/>
-                    <PortfolioCard img='web3.png'/>
-                    <PortfolioCard img='web3.png'/>
-                    <PortfolioCard img='web3.png'/>
-                    <PortfolioCard img='web3.png'/>
-                    <PortfolioCard img='web3.png'/>
-                    <PortfolioCard img='web3.png'/>
+                <Container className="py-4 portfolio_card d-flex flex-wrap justify-content-evenly">
+                    {cardInfo(PortfolioData)}
                 </Container>
             </section>
         </>

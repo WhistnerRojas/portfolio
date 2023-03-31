@@ -19,8 +19,9 @@ export default function Landingpage({ viewPage }: { viewPage: string | null }) {
     useEffect(()=>{
 
         viewPage !== null && setPage(viewPage)
-        page === 'about' && document.querySelector('#intersectsAbout')?.scrollIntoView({behavior: 'smooth'})
-        page === 'contact' && document.querySelector('#intersectsContact')?.scrollIntoView({behavior: 'smooth'})
+        page === 'about' && document.querySelector('#intersectsAbout')?.scrollIntoView()
+        page === 'contact' && document.querySelector('#intersectsContact')?.scrollIntoView()
+        page === 'portfolio' && window.scrollTo({top:0})
 
     }, [page])
 

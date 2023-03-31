@@ -1,55 +1,104 @@
 export default{
     data:{
-        "Kodego":{
-            p1:{
-                title: '',
-                technologies: '',
-                desc:''
-            },
-            p2:{
-                title: '',
-                technologies: '',
-                desc:''
-            },
-            p3:{
-                title: '',
-                technologies: '',
-                desc:''
-            }
+        p1:{
+            platform: "Kodego",
+            title: "SamOne Print Your Style",
+            techStach: "HTML, CSS, Bootstrap",
+            desc: "This is the first mini project required in the bootcamp. This site doesn't have any back end function.",
+            img: "web1.png",
+            github: "https://github.com/WhistnerRojas/samoneprints",
+            demo: "https://whistnerrojas.github.io/samoneprints/index.html",
+            projectBy: '',
         },
-        "Codewars": {
-            p1:{
-                title: '',
-                technologies: '',
-                desc:''
-            },
-            p2:{
-                title: '',
-                technologies: '',
-                desc:''
-            },
-            p3:{
-                title: '',
-                technologies: '',
-                desc:''
-            }
+        p2:{
+            platform: "Kodego",
+            title: "You Dessert It!",
+            techStach: "HTML, CSS, Bootstrap, JavaScript, API",
+            desc:"This is the second mini project required in the bootcamp. This site doesn't have any back end function.",
+            img: "",
+            github: "https://github.com/WhistnerRojas/youDessertIt",
+            demo: "https://whistnerrojas.github.io/youDessertIt/",
+            projectBy: '',
         },
-        "Frontend Mentor": {
-            p1:{
-                title: '',
-                technologies: '',
-                desc:''
-            },
-            p2:{
-                title: '',
-                technologies: '',
-                desc:''
-            },
-            p3:{
-                title: '',
-                technologies: '',
-                desc:''
-            }
-        }
+        p3:{
+            platform: "Kodego",
+            title: "SwiftMoneyTor",
+            techStach: "HTML, CSS, Bootstrap, MUI, JavaScript, API, React.js, Laravel, AWS (ECS, EC3, & RDS), Github, Netlify, MySql",
+            desc:"Capstone. This has functionality in it. This website aims to help MSE to better manage their business.",
+            img: "",
+            github: "https://github.com/SwiftMoneyTor/SwiftMoneyTor",
+            demo: "https://swiftmoneytorph.netlify.app/",
+            projectBy: '',
+        },
+        p4:{
+            platform: "Kodego",
+            title: "Kodego Activities",
+            techStach: "HTML, CSS, Bootstrap",
+            desc:"",
+            img: "",
+            github: "https://github.com/WhistnerRojas/kodego-demo/tree/master",
+            demo: "https://whistnerrojas.github.io/kodego-demo/",
+            projectBy: '',
+        },
+        p5:{
+            platform: "Kodego",
+            title: "",
+            techStach: "",
+            desc:"",
+            img: "",
+            github: "",
+            demo: "",
+            projectBy: '',
+        },
+        p6:{
+            platform: "Kodego",
+            title: "",
+            techStach: "",
+            desc:"",
+            img: "",
+            github: "",
+            demo: "",
+            projectBy: '',
+        },
+        p7:{
+            platform: "Kodego",
+            title: "",
+            techStach: "",
+            desc:"",
+            img: "",
+            github: "",
+            demo: "",
+            projectBy: '',
+        },
+        p8:{
+            platform: "Kodego",
+            title: "",
+            techStach: "",
+            desc:"",
+            img: "",
+            github: "",
+            demo: "",
+            projectBy: '',
+        },
+        p9:{
+            platform: "Kodego",
+            title: "",
+            techStach: "",
+            desc:"",
+            img: "",
+            github: "",
+            demo: "",
+            projectBy: '',
+        },
+        p10:{
+            platform: "Kodego",
+            title: "",
+            techStach: "",
+            desc:"",
+            img: "",
+            github: "",
+            demo: "",
+            projectBy: '',
+        },
     }
 }

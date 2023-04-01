@@ -6,6 +6,7 @@
   --secondaryBg: #F5EE84;
   --subLinks: #354973;
   --cardLink: #142c42;
+  --textSpacing: 1px;
 }
 
 body{
@@ -16,6 +17,7 @@ body{
   /* -webkit-background-color: linear-gradient(100deg,#005288, #7544ad, #8e44ad); */
   /* background-size: cover; */
   scroll-behavior: smooth;
+  letter-spacing: var(--textSpacing);
 }
 
 /* width */

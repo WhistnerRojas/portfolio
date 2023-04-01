@@ -7,19 +7,18 @@ import {CardActionArea, CardActions } from '@mui/material'
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
-export default function PortfolioCard({platform, projName, projLang, projDesc, img, projGit, projDemo  }: any) {
+export default function PortfolioCard({platform, projName, projLang, projDesc, img, projGit, projDemo}: any) {
 
     const imgPath = '../../../../resources/img'
     const splitList = ()=>{
         return projLang !=='' && projLang.split(",").map((lang:string, keys:number)=>{
-            return <Chip label={lang} variant="outlined" sx={{borderRadius:2}}/>
-                    // <Chip label="Chip Outlined" variant="outlined" />
+            return <Chip key={keys} label={lang} variant="outlined" sx={{borderRadius:2, borderColor: 'var(--secondaryBg) !important', marginRight: 1}}/>
         })
     }
 
     return (
         <Card sx={{ 
-                maxWidth: 390, 
+                maxWidth: 392, 
                 height: 455, 
                 marginLeft: 2, 
                 marginRight: 2, 
@@ -44,8 +43,8 @@ export default function PortfolioCard({platform, projName, projLang, projDesc, i
                     >
                         {projName || "Title"}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" className='fs-6'>
-                        TechStack: <br/><Stack direction="row" flexWrap='wrap' spacing={1} className="d-inline-block text-truncate" sx={{maxWidth: 350}}>{splitList()}</Stack>
+                    <Typography component="div" variant="body2" color="text.secondary" className='fs-6 d-inline-block text-truncate' sx={{maxWidth: 350}}>
+                        TechStack: <br/>{splitList()}
                     </Typography>
                 </CardContent>
             </CardActionArea>

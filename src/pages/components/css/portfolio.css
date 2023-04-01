@@ -20,8 +20,9 @@
     background-color: var(--subLinks) !important;
 }
 
-.subLinks.active{
-    background-color: #46464680 !important;
+.subLinks_child.active{
+    background-color: var(--subLinks) !important;
+    border-color: var(--subLinks) !important;
 }
 
 .portfolio_title::before{
@@ -39,4 +40,19 @@
 .MuiCardActions-root a:hover{
     background-color: var(--cardLink);
     border-color: var(--cardLink);
+}
+
+.MuiCardActions-root button:hover{
+    background-color: var(--cardLink);
+    border-color: var(--cardLink);
+}
+
+.cardTransition{
+    opacity: 0;
+    animation: fade-in .8s ease-in forwards;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

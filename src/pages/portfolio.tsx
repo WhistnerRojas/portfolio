@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, Component} from "react"
+import React, {useRef, useEffect, useState} from "react"
 import { Container } from "react-bootstrap"
 import SubLinks from "./components/portfolio/subLinks"
 import PortfolioCard from "./components/portfolio/portfolioCard"
@@ -7,12 +7,9 @@ import PortfolioData from "../assets/portfolioData"
 
 export default function Portfolio() {
 
-    // interface scrollX{
-    //     children : React.ReactNode;
-    // }
-
+    const [subLinkInstance, setSublinkInstance] = useState<string[]>([])
+    const [showCard, setShowCard] = useState<string>('all')
     const containerRef = useRef<HTMLDivElement>(null)
-
     useEffect(()=>{
         const container = containerRef.current;
         const handleScroll = (e: WheelEvent) => {
@@ -53,15 +50,22 @@ export default function Portfolio() {
         }
     }, [])
 
-    const subLinks = [
-        'all', 'Kodego', 'Codewars', 'Frontend Mentor'
-    ]
+    const fetchPlatform = (e: React.MouseEvent)=>{
+        e.currentTarget.textContent !== null && setShowCard(e.currentTarget.textContent)
+        document.querySelector('#cardTransition')?.classList.add("cardTransition")
+        setTimeout(function() {
+            document.querySelector('#cardTransition')?.classList.remove("cardTransition")
+        }, 800);
+    }
 
-    const portal =() =>{
-        return subLinks.map( (portal, key) =>{
-            return (
-                <SubLinks acc={portal} key={key} />
-            )
+    const portal =(obj:any) =>{
+        const projectNum = Object.keys(obj.data)
+        projectNum.map( (portal, key) =>{
+            const platform = obj.data[portal].platform
+            subLinkInstance === null ? setSublinkInstance([platform]) : !subLinkInstance.includes(platform) && setSublinkInstance([...subLinkInstance, platform])
+        })
+        return subLinkInstance.map((platformLink,key)=>{
+            return <SubLinks acc={platformLink} key={key} onClick={fetchPlatform} active={showCard}/>
         })
     }
 
@@ -78,16 +82,26 @@ export default function Portfolio() {
                 const projectDemo = obj.data[projectInfo].demo
 
                 return(
-                    <PortfolioCard 
-                        key={keys} 
-                        platform={platform !== '' ? platform : 'Platform'} 
-                        projName={projectName !== '' ? projectName : 'Project Name'}
-                        projLang={projectLang}
-                        projDesc={projectDesc}
-                        projGit={projectGit !== '' ? projectGit : '#'}
-                        projDemo={projectDemo !== '' ? projectDemo : '#'}
-                        img={projectImg !== '' ? projectImg : 'web3.png'} 
-                    />
+                    showCard === platform ? <PortfolioCard 
+                                                key={keys} 
+                                                platform={platform !== '' ? platform : 'Platform'} 
+                                                projName={projectName !== '' ? projectName : 'Project Name'}
+                                                projLang={projectLang}
+                                                projDesc={projectDesc}
+                                                projGit={projectGit !== '' ? projectGit : '#'}
+                                                projDemo={projectDemo !== '' ? projectDemo : '#'}
+                                                img={projectImg !== '' ? projectImg : 'web3.png'} 
+                                            /> : 
+                    showCard === 'all' && <PortfolioCard 
+                                                key={keys} 
+                                                platform={platform !== '' ? platform : 'Platform'} 
+                                                projName={projectName !== '' ? projectName : 'Project Name'}
+                                                projLang={projectLang}
+                                                projDesc={projectDesc}
+                                                projGit={projectGit !== '' ? projectGit : '#'}
+                                                projDemo={projectDemo !== '' ? projectDemo : '#'}
+                                                img={projectImg !== '' ? projectImg : 'web3.png'} 
+                                            />
                 )
             })
     }
@@ -97,12 +111,12 @@ export default function Portfolio() {
             <Container>
                 <div ref={containerRef} className="subLinks pt-5">
                     <div style={{ position: 'relative', left: 0 }}>
-                        {portal()}
+                    <SubLinks acc="all" onClick={fetchPlatform} active={showCard}/>{portal(PortfolioData)}
                     </div>
                 </div>
             </Container>
             <section className="container pt-4">
-                <Container className="py-4 portfolio_card d-flex flex-wrap justify-content-evenly">
+                <Container className="py-4 portfolio_card d-flex flex-wrap" id="cardTransition">
                     {cardInfo(PortfolioData)}
                 </Container>
             </section>

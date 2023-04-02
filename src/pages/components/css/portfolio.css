@@ -49,10 +49,10 @@
 
 .cardTransition{
     opacity: 0;
-    animation: fade-in .8s ease-in forwards;
+    animation: cardFadeIn .8s ease-in forwards;
 }
 
-@keyframes fade-in {
+@keyframes cardFadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }

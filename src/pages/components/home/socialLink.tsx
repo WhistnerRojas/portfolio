@@ -1,6 +1,5 @@
 import React from 'react'
-import {FaFacebook, FaGithub, FaTelegram, FaLinkedin} from 'react-icons/fa'
-import {AiFillGoogleCircle} from 'react-icons/ai'
+import {FaFacebook, FaGithub, FaTelegram, FaLinkedin, FaGoogle} from 'react-icons/fa'
 
 export default function SocialLink() {
     return (
@@ -9,7 +8,7 @@ export default function SocialLink() {
             <a href="https://github.com/WhistnerRojas" target="_blank" rel='noreferrer noopener'><FaGithub /></a>
             <a href="https://www.linkedin.com/in/whistnerrojas/" target="_blank" rel='noreferrer noopener'><FaLinkedin /></a>
             <a href="https://t.me/OneP1nch" target="_blank" rel='noreferrer'><FaTelegram /></a>
-            <a href="https://developers.google.com/profile/u/MrRojas" style={{fontSize: 36}} target="_blank" rel='noreferrer'><AiFillGoogleCircle /></a>
+            <a href="https://developers.google.com/profile/u/MrRojas" target="_blank" rel='noreferrer'><FaGoogle /></a>
         </span>
     )
 }

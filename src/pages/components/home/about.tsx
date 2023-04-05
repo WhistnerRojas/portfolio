@@ -1,7 +1,7 @@
 import '../css/about.css'
 import Pic1 from '../../img/about1.png'
 import Pic2 from '../../img/about2.png'
-import Pic3 from '../../img/about3.png'
+import Pic3 from '../../img/kodegoCert.png'
 import AboutComp from '../about/aboutComp';
 
 export default function About(): JSX.Element {

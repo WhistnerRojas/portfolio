@@ -18,8 +18,8 @@ export default function PortfolioCard({platform, projName, projLang, projDesc, i
 
     return (
         <Card sx={{ 
+                display: 'grid',
                 maxWidth: 392, 
-                height: 455, 
                 marginLeft: 2, 
                 marginRight: 2, 
                 marginTop: 2, 
@@ -43,7 +43,7 @@ export default function PortfolioCard({platform, projName, projLang, projDesc, i
                     >
                         {projName || "Title"}
                     </Typography>
-                    <Typography component="div" variant="body2" color="text.secondary" className='fs-6 d-inline-block text-truncate' sx={{maxWidth: 350}}>
+                    <Typography component="div" variant="body2" color="text.secondary" className='fs-6 d-inline-block text-truncate' sx={{maxWidth: 320}}>
                         TechStack: <br/>{splitList()}
                     </Typography>
                 </CardContent>

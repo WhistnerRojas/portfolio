@@ -44,16 +44,16 @@ function Navigation(prop: any) {
                 <Navbar.Collapse id="responsive-navbar-nav" className='bgBurger'>
                 <Nav className="justify-content-end flex-grow-1 px-3 pt-3 navLinks">
                     <Nav.Item onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <Link to='/' onClick={prop.click} data-nav='home'>Home</Link>
+                        <Link to='/' data-nav='home'>Home</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link to='/about' onClick={prop.click} data-nav='about'>About</Link>
+                        <Link to='/about' data-nav='about'>About</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link to='/portfolio' onClick={prop.click} data-nav='portfolio'>Portfolio</Link>
+                        <Link to='/project' data-nav='project'>Project</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link to='/contact' onClick={prop.click} data-nav='contact'>Contact</Link>
+                        <Link to='/contact' data-nav='contact'>Contact</Link>
                     </Nav.Item>
                 </Nav>
                 <Nav className='pt-3 ps-5'>

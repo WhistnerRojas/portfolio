@@ -2,12 +2,10 @@ import React from 'react'
 import { create } from 'zustand'
 
 interface hooked{
-    page: string;
     subPage: string;
     privatePage: string;
     auth: Boolean;
     creds: Object;
-    setPage: (val: string) => void;
     setSubPage: (val:string) => void;
     setPrivatePage: (val: string) => void;
     setAuth: () => void;
@@ -15,7 +13,6 @@ interface hooked{
 }
 
 export const StoreHooks= create<hooked>((set)=>({
-    page: 'home',
     subPage: 'all',
     privatePage: 'dashboard',
     auth: false,
@@ -26,7 +23,6 @@ export const StoreHooks= create<hooked>((set)=>({
         id:''
     },
 
-    setPage: (val:string)=> set((state) => ({...state, page: val})),
     setSubPage: (val:string)=> set((state) => ({...state, subPage: val})),
     setPrivatePage: (val:string)=> set( (state) => ({...state, privatePage: val})),
     setAuth: () => set( state => ({...state, auth: !state.auth})),

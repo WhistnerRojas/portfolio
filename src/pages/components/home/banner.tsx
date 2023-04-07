@@ -1,5 +1,6 @@
 import React , {useState, useEffect} from 'react'
 import Picture from '../../img/dp.png'
+import Err from '../../img/err.png'
 import Social from './socialLink'
 import './../css/banner.css'
 
@@ -27,7 +28,7 @@ export default function Banner({err}:any) {
                             <Social />
                         </div>
                         <div className="col-md-4 dp py-md-4 d-flex justify-content-center">
-                            <img className='w-75' src={Picture} alt=""/>
+                            <img className='w-75' src={err !== 'notFound' ? Picture : Err} alt=""/>
                         </div>
                     </div>
                 </div>

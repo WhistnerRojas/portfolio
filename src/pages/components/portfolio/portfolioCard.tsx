@@ -55,9 +55,9 @@ export default function PortfolioCard({platform, projName, projLang, projDesc, i
                 <a className='btn btn-dark' href={projDemo} target='_blank'>
                     Live Demo
                 </a>
-                <button className='btn btn-dark ms-2' >
+                {/* <button className='btn btn-dark ms-2' >
                     more...
-                </button>
+                </button> */}
             </CardActions>
         </Card>
     );

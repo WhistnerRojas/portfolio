@@ -86,7 +86,7 @@ export default{
             techStach: "Laravel, MySQL, Vue, Bootstrap",
             desc:"This is my tech exam answer",
             img: "pbTechExam.png",
-            github: "https://github.com/WhistnerRojas/PBExpenseManager",
+            github: "https://github.com/WhistnerRojas/ExpenseManager",
             demo: "",
             projectBy: 'Whistner',
         },

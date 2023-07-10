@@ -81,7 +81,7 @@ export default{
             projectBy: "Whistner",
         },
         p9:{
-            platform: "PB Tech Exam",
+            platform: "Tech Exam",
             title: "Expense Manager",
             techStach: "Laravel, MySQL, Vue, Bootstrap",
             desc:"This is my tech exam answer",

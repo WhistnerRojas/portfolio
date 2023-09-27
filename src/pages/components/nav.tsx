@@ -58,7 +58,7 @@ function Navigation(prop: any) {
                 </Nav>
                 <Nav className='pt-3 ps-5'>
                     <Nav.Item className='btn btn-outline-warning download'>
-                        <Link to='https://drive.google.com/file/d/1-VM0xXxw4zimzih6AtCZM9p9BoFbWCgQ/view?usp=sharing' target='_blank' download={true}>Download CV</Link>
+                        <Link to='https://drive.google.com/file/d/1HIYvzqEICikbJ3rczw4Qm5nZUVedESnu/view?usp=sharing' target='_blank' download={true}>View CV</Link>
                     </Nav.Item>
                 </Nav>
                 </Navbar.Collapse>

@@ -21,7 +21,7 @@ export default{
             projectBy: 'Whistner',
         },
         p10:{
-            platform: "Coding Nepal",
+            platform: "Chat APP",
             title: "Simpla Chat APP",
             techStach: "HTML, CSS, JavaScript, MySQL, PHP",
             desc: "A simple Chat APP by Coding Nepal, Refactored by Whistner Rojas.",

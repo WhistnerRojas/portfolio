@@ -70,7 +70,6 @@ export default function Portfolio() {
     }
 
     const cardInfo = (obj: any) : any=>{
-        let i:number=0
             const projectList = Object.keys(obj.data)
             return projectList.map((projectInfo, keys)=>{
                 const platform = obj.data[projectInfo].platform

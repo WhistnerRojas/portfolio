@@ -91,14 +91,14 @@ export default{
             projectBy: 'Whistner',
         },
         p10:{
-            platform: "Codewars",
-            title: "",
-            techStach: "",
-            desc:"",
+            platform: "Coding Nepal",
+            title: "Simpla Chat APP",
+            techStach: "HTML, CSS, JavaScript, MySQL, PHP",
+            desc: "A simple Chat APP by Coding Nepal, Refactored by Whistner Rojas.",
             img: "",
-            github: "",
+            github: "https://github.com/WhistnerRojas/LearningPHP-loginSys",
             demo: "",
-            projectBy: '',
+            projectBy: 'Whistner Rojas',
         },
     }
 }

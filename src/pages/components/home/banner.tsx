@@ -10,7 +10,7 @@ export default function Banner({err}:any) {
 
     useEffect(() => {
         setIsVisible(true);
-    }, []);
+    }, []);    
 
     return (
         <div className={`d-flex flex-column justify-content-center align-items-center py-md-5 home ${isVisible ? 'visible' : ''}`}>

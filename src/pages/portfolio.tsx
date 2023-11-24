@@ -70,7 +70,7 @@ export default function Portfolio() {
     }
 
     const cardInfo = (obj: any) : any=>{
-            const projectList = Object.keys(obj.data)
+            const projectList = Object.keys(obj.data).reverse()
             return projectList.map((projectInfo, keys)=>{
                 const platform = obj.data[projectInfo].platform
                 const projectName = obj.data[projectInfo].title
@@ -79,6 +79,8 @@ export default function Portfolio() {
                 const projectImg = obj.data[projectInfo].img
                 const projectGit = obj.data[projectInfo].github
                 const projectDemo = obj.data[projectInfo].demo
+
+                console.log(projectList.length) //output 10
 
                 return(
                     showCard === platform ? <PortfolioCard 

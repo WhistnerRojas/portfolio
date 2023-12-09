@@ -97,7 +97,7 @@ export default{
             desc: "A simple Chat APP by Coding Nepal, Refactored by Whistner Rojas.",
             img: "",
             github: "https://github.com/WhistnerRojas/LearningPHP-loginSys",
-            demo: "http://simplechat.free.nf/",
+            demo: "https://simplechat.free.nf/",
             projectBy: 'Whistner Rojas',
         },
     }

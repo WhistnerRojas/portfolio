@@ -90,7 +90,7 @@ export default function Portfolio() {
                                                 projLang={projectLang}
                                                 projDesc={projectDesc}
                                                 projGit={projectGit !== '' ? projectGit : '#'}
-                                                projDemo={projectDemo !== '' ? projectDemo : '#'}
+                                                projDemo={projectDemo}
                                                 img={projectImg !== '' ? projectImg : 'web3.png'} 
                                             /> : 
                     showCard === 'all' && <PortfolioCard 
@@ -100,7 +100,7 @@ export default function Portfolio() {
                                                 projLang={projectLang}
                                                 projDesc={projectDesc}
                                                 projGit={projectGit !== '' ? projectGit : '#'}
-                                                projDemo={projectDemo !== '' ? projectDemo : '#'}
+                                                projDemo={projectDemo}
                                                 img={projectImg !== '' ? projectImg : 'web3.png'} 
                                             />
                 )

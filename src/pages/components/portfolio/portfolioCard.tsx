@@ -52,9 +52,9 @@ export default function PortfolioCard({platform, projName, projLang, projDesc, i
                 <a className='btn btn-dark' href={projGit} target='_blank'>
                     Github
                 </a>
-                <a className='btn btn-dark' href={projDemo} target='_blank'>
+                {projDemo !=='' && <a className='btn btn-dark' href={projDemo} target='_blank'>
                     Live Demo
-                </a>
+                </a>}
                 {/* <button className='btn btn-dark ms-2' >
                     more...
                 </button> */}

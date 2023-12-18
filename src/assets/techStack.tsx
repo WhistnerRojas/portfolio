@@ -54,14 +54,6 @@ export default {
                 desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit reiciendis aut, amet dolorum reprehenderit quae? Labore, reiciendis dignissimos accusantium eaque odit, rerum, blanditiis cupiditate quia dolorum magnam exercitationem dolores officia."
             },
             {
-                lang: 'C++', 
-                desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit reiciendis aut, amet dolorum reprehenderit quae? Labore, reiciendis dignissimos accusantium eaque odit, rerum, blanditiis cupiditate quia dolorum magnam exercitationem dolores officia."
-            },
-            {
-                lang: 'JAVA', 
-                desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit reiciendis aut, amet dolorum reprehenderit quae? Labore, reiciendis dignissimos accusantium eaque odit, rerum, blanditiis cupiditate quia dolorum magnam exercitationem dolores officia."
-            },
-            {
                 lang: 'Photoshop', 
                 desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit reiciendis aut, amet dolorum reprehenderit quae? Labore, reiciendis dignissimos accusantium eaque odit, rerum, blanditiis cupiditate quia dolorum magnam exercitationem dolores officia."
             }

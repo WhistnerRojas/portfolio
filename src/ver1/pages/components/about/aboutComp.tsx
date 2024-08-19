@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Skills from '../about/skills';
-import StackData from '../../../assets/techStack';
+import StackData from '../../../../assets/techStack';
 
 export default function AboutComp(props:any) {
 

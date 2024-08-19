@@ -2,7 +2,7 @@ import React, {useRef, useEffect, useState} from "react"
 import { Container } from "react-bootstrap"
 import SubLinks from "./components/portfolio/subLinks"
 import PortfolioCard from "./components/portfolio/portfolioCard"
-import PortfolioData from "../assets/portfolioData"
+import PortfolioData from "../../assets/portfolioData"
 // import { object } from "yup";
 
 export default function Portfolio() {

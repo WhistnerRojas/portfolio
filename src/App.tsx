@@ -1,6 +1,6 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Landingpage from './pages/landingpage';
+import Landingpage from './ver1/pages/landingpage';
 import PrivateRoutes from './assets/privateRoutes';
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
